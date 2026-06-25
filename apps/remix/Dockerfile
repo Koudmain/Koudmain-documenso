@@ -24,6 +24,10 @@
 
 FROM node:22-alpine
 
+ARG LOCAL_IP
+
+ENV LOCAL_IP=${LOCAL_IP}
+
 RUN apk add --no-cache bash
 
 WORKDIR /app
